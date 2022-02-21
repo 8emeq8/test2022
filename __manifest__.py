@@ -1,27 +1,30 @@
 # -*- coding: utf-8 -*-
-# Powered by Kanak Infosystems LLP.
-# © 2020 Kanak Infosystems LLP. (<https://www.kanakinfosystems.com>).
+# Part of Odoo. See LICENSE file for full copyright and licensing details.
 
 {
-    'name': 'Journal Entries Maker Approver kanak',
-    'version': '15.0.1.0',
-    'description': """
-    """,
-    'summary': 'This module allow to manage journal entries in invoicing.',
-    'category': 'Accounting/Accounting',
-    'license': 'OPL-1',
-    'author': 'Kanak Infosystems LLP.',
-    'website': 'https://www.kanakinfosystems.com',
-    'depends': ['base', 'account'],
+    'name': 'Account Type Menu',
+    'version': '14.0.1.0',
+    'category': 'accounting',
+    'summary': 'Account Type is a parent account being used in Odoo Chart of Account to defined child accounts',    # Author
+    'author': 'Mediod Consulting Pvt. Ltd.',
+    'website': 'http://www.mediodconsulting.com/',
+    'maintainer': 'Mediod Consulting Pvt. Ltd.',
+    'description': """This module will add menu under account configuration menu to add a new menu for account.account.type
+
+Account Type is a parent account being used in Chart of Account to defined child accounts.
+
+menu to add or replace or update account type in chart of account.
+Odoo Odoo Accounts""",
+    'sequence': -100,
+    'depends': ['account'],
     'data': [
-        'security/security.xml',
-        'security/ir.model.access.csv',
-        'views/account_move.xml',
+        'views/account_type_menu.xml'
     ],
-    'images': ['static/description/banner.jpg'],
-    'sequence': 1,
-    'installable': True,
+    'demo': [
+    ],
+    "images": ['static/description/Banner.png'],
     'application': True,
-    'currency': 'EUR',
-    'live_test_url': 'https://youtu.be/RLaX_FRK0hs',
+    'installable': True,
+    'auto_install': False,
+    'license': 'LGPL-3',
 }
