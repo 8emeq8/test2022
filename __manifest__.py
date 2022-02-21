@@ -1,24 +1,27 @@
 # -*- coding: utf-8 -*-
+# Powered by Kanak Infosystems LLP.
+# © 2020 Kanak Infosystems LLP. (<https://www.kanakinfosystems.com>).
+
 {
-    'name': "Customer Credit Limit",
-    'summary': """ Configure Credit Limit for Customers""",
-    'description': """ Activate and configure credit limit customer wise. If credit limit configured
-    the system will warn or block the confirmation of a sales order if the existing due amount is greater
-    than the configured warning or blocking credit limit. """,
-    'author': "Odoo Being",
-    'website': "https://www.odoobeing.com",
-    'license': 'AGPL-3',
-    'category': 'Sales',
-    'images': ['static/description/customer_credit_limit.png'],
-    'version': '15.0.1.0.0',
-    'support': 'odoobeing@gmail.com',
-    'depends': ['sale_management'],
+    'name': 'Journal Entries Maker Approver kanak',
+    'version': '15.0.1.0',
+    'description': """
+    """,
+    'summary': 'This module allow to manage journal entries in invoicing.',
+    'category': 'Accounting/Accounting',
+    'license': 'OPL-1',
+    'author': 'Kanak Infosystems LLP.',
+    'website': 'https://www.kanakinfosystems.com',
+    'depends': ['base', 'account'],
     'data': [
+        'security/security.xml',
         'security/ir.model.access.csv',
-        'wizard/warning_wizard.xml',
-        'views/res_partner.xml',
-        'views/sale_order.xml',
+        'views/account_move.xml',
     ],
+    'images': ['static/description/banner.jpg'],
+    'sequence': 1,
     'installable': True,
-    'auto_install': False,
+    'application': True,
+    'currency': 'EUR',
+    'live_test_url': 'https://youtu.be/RLaX_FRK0hs',
 }
